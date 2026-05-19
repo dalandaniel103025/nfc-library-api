@@ -1,9 +1,12 @@
 <?php
 
-$host = "localhost";
-$user = "root";
-$password = "";
-$database = "nfc_library_system";
+$host = "sql301.infinityfree.com";
+
+$user = "if0_41967008";
+
+$password = "TMKNFCLib26";
+
+$database = "if0_41967008_nfclibrary";
 
 $conn = new mysqli(
     $host,
@@ -12,11 +15,11 @@ $conn = new mysqli(
     $database
 );
 
-if($conn->connect_error){
-
+if($conn->connect_error)
+{
     die(
-        "Database connection failed"
+        "Connection failed: " .
+        $conn->connect_error
     );
 }
-
 ?>
