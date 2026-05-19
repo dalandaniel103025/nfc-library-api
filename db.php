@@ -1,25 +1,21 @@
 <?php
 
-$host = "sql301.infinityfree.com";
-
-$user = "if0_41967008";
-
-$password = "TMKNFCLib26";
-
-$database = "if0_41967008_nfclibrary";
+$host = getenv("MYSQLHOST");
+$user = getenv("MYSQLUSER");
+$password = getenv("MYSQLPASSWORD");
+$database = getenv("MYSQLDATABASE");
+$port = getenv("MYSQLPORT");
 
 $conn = new mysqli(
     $host,
     $user,
     $password,
-    $database
+    $database,
+    $port
 );
 
-if($conn->connect_error)
+if ($conn->connect_error)
 {
-    die(
-        "Connection failed: " .
-        $conn->connect_error
-    );
+    die("Connection failed: " . $conn->connect_error);
 }
 ?>
