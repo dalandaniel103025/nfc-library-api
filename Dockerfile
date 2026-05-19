@@ -5,3 +5,4 @@ RUN docker-php-ext-install mysqli
 COPY . /var/www/html
 
 CMD ["apache2-foreground"]
+
